@@ -23,13 +23,13 @@
             <div class="navbar-links "id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item active">
-                  <a class="nav-link" href="" >Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="{{ route('home') }}" >Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href=" ">User</a>
+                  <a class="nav-link" href=" {{route('user.index')}} ">Users</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="">Blog</a>
+                  <a class="nav-link" href="{{route('post.index')}}">Blog</a>
                 </li>
               </ul>
             </div>

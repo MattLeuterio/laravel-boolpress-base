@@ -22,8 +22,7 @@
                         <p class="article-body--content">{{ $post->body }}</p>
                     </div>
                 </article>
-                @if(! $loop->last) <hr> @endif
-            @endforeach
+                @endforeach
             </div>
         </div>
 

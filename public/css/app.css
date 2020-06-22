@@ -120,3 +120,8 @@ ul {
   color: #e13335;
 }
 
+.user-posts--title {
+  padding: 10px 0;
+  font-size: 100%;
+}
+

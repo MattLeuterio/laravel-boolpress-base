@@ -14,3 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'HomeController@index')->name('home');
+
+// Users
+Route::resource('user', 'UserController');
+
+// Posts
+Route::resource('post', 'PostController');

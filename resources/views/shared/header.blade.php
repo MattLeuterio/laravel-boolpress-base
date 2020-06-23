@@ -31,6 +31,9 @@
                 <li class="nav-item">
                   <a class="nav-link" href="{{route('post.index')}}">Blog</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{route('dashboard')}}">Dashboard</a>
+                </li>
               </ul>
             </div>
         </nav>

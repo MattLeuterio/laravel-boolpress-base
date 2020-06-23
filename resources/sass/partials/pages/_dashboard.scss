@@ -1,0 +1,15 @@
+.title-and-cta {
+        @include flex(row, space-between, center);   
+}
+
+.dashboard {
+
+    &-ctn {
+        margin-bottom: 100px;
+    }
+
+    &-ctn:last-child {
+        margin-bottom: 0;
+    }
+}
+

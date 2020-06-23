@@ -20,3 +20,6 @@ Route::resource('user', 'UserController');
 
 // Posts
 Route::resource('post', 'PostController');
+
+//dashboard
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');

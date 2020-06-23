@@ -194,3 +194,18 @@ ul {
   font-size: 100%;
 }
 
+.title-and-cta {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-ctn {
+  margin-bottom: 100px;
+}
+
+.dashboard-ctn:last-child {
+  margin-bottom: 0;
+}
+

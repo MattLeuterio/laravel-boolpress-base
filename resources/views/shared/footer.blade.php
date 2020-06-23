@@ -1,5 +1,5 @@
 <footer class="main-footer">
-    footer
+   <h5>Mattpress by <a href="https://github.com/MattLeuterio" target="_blank">MattLeuterio</a></h5>
 </footer>
 
 {{-- JS --}}

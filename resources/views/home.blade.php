@@ -4,22 +4,19 @@
     <main class="main-content">
         
         
-        <div class="container">
+        <div class="container home">
             <div class="row title-page">
                 <h2>Latest Posts</h2>
             </div>
-            <div class="row">
+            <div class="row articles">
                 @foreach ($posts as $post)
                 <article class="article">
-                    <div class="article-image mb-4">
+                    <div class="article-image position-relative">
                         <img class="img-fluid" src=" {{ $post->coverpost }} " alt="">
-                    </div>
-                    <div class="article-body">
-                        <small>Created at: {{ $post->created_at }}</small>
-                        <h3 class="article-body--title">{{ $post->title }}</h3>
-                        <h4 class="article-body--subtitle">{{ $post->subtitle }}</h4>
-                        <p class="article-body--author">Author: {{ $post->user['name'] }}</è>
-                        <p class="article-body--content">{{ $post->body }}</p>
+                        <div class="article-body position-absolute">
+                            <small>Created at: {{ $post->created_at }}</small>
+                            <h3 class="article-body--title"><a href=" {{ route('post.show', $post->id) }} ">{{ $post->title }}</a></h3>
+                        </div>
                     </div>
                 </article>
                 @endforeach

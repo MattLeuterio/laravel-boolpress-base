@@ -16,6 +16,10 @@
 @mixin reset-a {
     color: inherit;
     text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 @mixin flex($dir: row, $just: flex-start, $align: flex-start) {

@@ -23,7 +23,11 @@
                         <div class="user-posts mt-5">
                             <h3>Posts:</h3>
                             @foreach($user->posts as $post)
-                                <h4 class="user-posts--title">{{ $post->title }}</h4>
+                                <ul>
+                                    <li>
+                                        <a href="{{ route('post.show', $post->id) }}" class="user-posts--title">{{ $post->title }}</a>
+                                    </li>
+                                </ul>
                             @endforeach
                         </div>
 

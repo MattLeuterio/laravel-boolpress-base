@@ -1,0 +1,43 @@
+.single-article {
+    @include flex(column, center, center);
+    padding: 30px;
+    border-radius: 3px;
+
+    &-header {
+        text-align: center;
+
+        &--title {
+            font-size: 400%;
+            font-weight: 600;
+            color: $main-color;
+        }
+
+        
+        &--author {
+            
+        }
+    }
+    
+    &-image {  
+        width: 100%;
+        
+        img {
+            object-fit: cover;
+            object-position: top;
+            width: 100%;
+            height: 500px;
+        }
+    }
+    &-body {
+        @include flex(column, center, center);  
+        width: 95%;
+        padding: 30px;
+        
+        &--subtitle {
+            font-size: 105%;
+            width: 80%;
+            font-style: italic;
+            text-align: center;
+        }
+    }
+}

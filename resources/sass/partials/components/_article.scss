@@ -1,34 +1,57 @@
+.home {
+    
+    .row.articles {
 
-.article {
-    @include flex(row, center, center);
-    background-color: $gray;
-    padding: 30px;
-    border-radius: 3px;
 
-    &-image {  
-        @include flex(row, center, center);
-        width: 30%;
-        border-radius: 3px;
-
-        img {
+        .article {
+            background-color: #efefef;
             border-radius: 3px;
-        }
-    }
-    &-body {  
-        width: 70%;
-        padding: 30px;
+            width: 40%;
+            height: 250px;
+            margin: 30px;
+            display: inline-block;
+        
+            &-image {  
+                width: 100%;
+                height: 100%;
+                border-radius: 3px;
+        
+                img {
+                    width: 100%;
+                    max-width: 100%;
+                    height: auto;
+                    max-height: 100%;
+                    object-fit: cover;
+                    border-radius: 3px;
+                    filter: brightness(0.3);
+                }
+        
+                .article-body {  
+                    bottom: 0;
+                    left: 10px;
 
-        &--title {
-            font-weight: 600;
-            color: $main-color;
-        }
+                    small {
+                        color: $dark-accent;
+                    }
+            
+                    &--title {
+                        font-weight: 600;
+                        color: $main-color;
 
-        &--subtitle {
-            font-size: 105%;
-        }
-
-        &--author {
-            color: $main-color;
+                        & a:hover {
+                            color: $light-accent;
+                        }
+                    }
+            
+                    &--subtitle {
+                        font-size: 105%;
+                    }
+            
+                    &--author {
+                        color: $main-color;
+                    }
+                }
+            }
         }
     }
 }

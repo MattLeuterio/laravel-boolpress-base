@@ -27,6 +27,31 @@
 
                 </article>
             </div>
+            <div class="row">
+
+                <div class="comments">
+
+                    <div class="comments-input">
+                        input
+                    </div>
+
+                    <div class="comments-list">
+                        @foreach($post->comments as $comment)
+
+                            <div class="comments-list--cm">
+
+                            <p class="cm-name"> {{ $comment->name }}</p>
+                            <p class="cm-content"> {{ $comment->content }}</p>
+                            <small class="cm-date"> {{ $comment->created_at }}</small>
+
+                            </div>
+
+                        @endforeach
+                    </div>
+
+                </div>
+
+            </div>
         </div>
 
     </main>

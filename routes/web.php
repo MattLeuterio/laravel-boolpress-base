@@ -21,5 +21,8 @@ Route::resource('user', 'UserController');
 // Posts
 Route::resource('post', 'PostController');
 
+// Posts
+Route::resource('comment', 'CommentController');
+
 //dashboard
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');

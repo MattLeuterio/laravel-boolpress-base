@@ -66,7 +66,7 @@
             
                     <div class="row title-and-cta">
                         <h1>Posts</h1>
-                        <a class="btn btn-sm btn-secondary" href="{{ route('user.create') }}">Add Post</a>
+                        <a class="btn btn-sm btn-secondary" href="{{ route('post.create') }}">Add Post</a>
                     </div>
             
                     <div class="row posts-table mt-4">
@@ -89,7 +89,7 @@
                                     <td>{{ $post->title }}</td>
                                     <td>{{ $post->created_at }}</td>
                                     <td>{{ $post->updated_at }}</td>
-                                    <td><a class="btn btn-info" href="{{ route('post.show', $post->id) }}">Show</a></td>
+                                    <td><a class="btn btn-info" href="{{ route('post.show', $post->slug) }}">Show</a></td>
                                     <td><a class="btn btn-success"href="{{ route('post.edit', $post->id) }}">Update</a></td>
                                     <td>
                                         <form action="{{ route('post.destroy', $post->id) }}" method="POST">

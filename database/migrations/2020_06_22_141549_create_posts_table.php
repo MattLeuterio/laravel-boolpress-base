@@ -20,6 +20,7 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->string('subtitle');
             $table->text('body');
+            $table->string('slug');
             $table->timestamps();
 
             // Relation

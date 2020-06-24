@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
-use App\Post;
 
-class PostController extends Controller
+class CommentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +13,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
-        return view('posts.index', compact('posts'));
+        //
     }
 
     /**
@@ -26,7 +23,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('posts.create');
+        //
     }
 
     /**
@@ -37,34 +34,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-
-        $request->validate([
-            'title' => 'required',
-            'subtitle' => 'required',
-            'body' => 'required'
-        ]);
-
-        $data = $request->all();
-
-        // User ID
-        $data['user_id'] = 1;
-
-        // generate post slug
-        $data['slug'] = Str::slug($data['title'], '-');
-
-        $newPost = New Post();
-        $newPost->fill($data);
-        
-        $saved = $newPost->save();
-
-        if ($saved) {
-            // da modificare gestendo lo slug anzichè l'id
-            return redirect()->route('post.show', $newPost->id);
-
-        }
-
-
-
+        //
     }
 
     /**
@@ -73,10 +43,9 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($slug)
+    public function show($id)
     {
-        $post = Post::where('slug', $slug)->first();
-        return view('posts.show', compact('post'));
+        //
     }
 
     /**

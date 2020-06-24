@@ -11,10 +11,18 @@ class Post extends Model
         'coverpost',
         'title',
         'subtitle',
-        'body'
+        'body',
+        'slug'
     ];
 
+    // User
     public function user() {
         return $this->belongsTo('App\User');
+    }
+
+    // Comments
+    public function comments()
+    {
+        return $this->hasMany('App\Comment');
     }
 }

@@ -189,6 +189,41 @@ ul {
   text-align: center;
 }
 
+.comments {
+  width: 80%;
+}
+
+.comments-input {
+  width: 100%;
+}
+
+.comments-input form {
+  width: 100%;
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.comments-list--cm {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  border: 1px solid #9c8c94;
+  padding: 20px 15px;
+  border-radius: 12px;
+}
+
+.comments-list--cm .cm-name {
+  color: #e13335;
+  font-weight: 600;
+}
+
 .user-posts--title {
   padding: 10px 0;
   font-size: 100%;

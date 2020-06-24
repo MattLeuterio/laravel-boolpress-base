@@ -14,17 +14,18 @@ class CommentTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
+        $comments = 50;
         $posts = Post::all();
 
-        foreach ($posts as $post) {
+        for ($i = 0; $i < $comments; $i++) 
+        {
             $newComment = new Comment();
 
-            $newComment->post_id = $post->id;
+            $newComment->post_id = $posts->random()->id;
             $newComment->name = $faker->name();
             $newComment->content = $faker->text(50);
 
             $newComment->save();
-            
         }
     }
 }

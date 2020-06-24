@@ -15,7 +15,7 @@
                         <img class="img-fluid" src=" {{ $post->coverpost }} " alt="">
                         <div class="article-body position-absolute">
                             <small>Created at: {{ $post->created_at }}</small>
-                            <h3 class="article-body--title"><a href=" {{ route('post.show', $post->id) }} ">{{ $post->title }}</a></h3>
+                            <h3 class="article-body--title"><a href=" {{ route('post.show', $post->slug) }} ">{{ $post->title }}</a></h3>
                         </div>
                     </div>
                 </article>

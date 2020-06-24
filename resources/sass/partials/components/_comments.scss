@@ -1,0 +1,30 @@
+.comments {
+    width: 80%;
+    
+    &-input {
+        width: 100%;
+        
+        form {
+            width: 100%;
+
+        }
+    }
+
+    &-list {
+        @include flex(column);
+
+        &--cm {
+            @include flex(column);
+            width: 100%;
+            border: 1px solid $dark-accent;
+            padding: 20px 15px;
+            border-radius: 12px;
+
+            .cm-name {
+                color: $main-color;
+                font-weight: 600;
+            }
+        }
+    }
+    
+}

@@ -59,7 +59,7 @@ class PostController extends Controller
 
         if ($saved) {
             // da modificare gestendo lo slug anzichè l'id
-            return redirect()->route('post.show', $newPost->id);
+            return redirect()->route('post.show', $newPost->slug);
 
         }
 
@@ -108,8 +108,25 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Post $post)
     {
-        //
+
+        if (empty($post)) {
+            abort('404');
+        }
+        
+        $refPost = $post->title;
+
+        //remove related comments
+        $post->comments()->delete();
+
+        //remove post
+        $hasDeleted = $post->delete();
+        
+        if($hasDeleted) {
+            return redirect()->route('dashboard')->with('postDeleted', $refPost);
+        }
+
+        return view('posts.index');
     }
 }

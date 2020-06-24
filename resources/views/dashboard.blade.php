@@ -58,9 +58,9 @@
             <div class="dashboard-ctn">
                 
                 <div class="container">
-                    @if(session('deleted'))
+                    @if(session('postDeleted'))
                         <div class="row deleted alert alert-success">
-                            {{ session('deleted') }}
+                            <p>{{ session('postDeleted') }} has been deleted</p>
                         </div>
                     @endif
             
